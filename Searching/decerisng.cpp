@@ -4,24 +4,21 @@ using namespace std;
 int main() {
 
     int n = 6;
-    int arr[] = {2, 3, 4, 5, 20, 40};
-
-    int key = 5;
+    int arr[] = {38, 30, 20, 5, 4, 2};
 
     int start = 0;
     int end = n - 1;
-
-    bool found = false;
+    int key = 38;
 
     while (start <= end) {
 
         int mid = start + (end - start) / 2;
 
         if (arr[mid] == key) {
-            found = true;
-            break;
+            cout << "Element is present";
+            return 0;
         }
-        else if (arr[mid] < key) {
+        else if (arr[mid] > key) {
             start = mid + 1;
         }
         else {
@@ -29,13 +26,7 @@ int main() {
         }
     }
 
-    // Check after the loop
-    if (found) {
-        cout << "Element is found";
-    }
-    else {
-        cout << "Element is not found";
-    }
+    cout << "Element is not present";
 
     return 0;
 }
