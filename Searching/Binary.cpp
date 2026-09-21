@@ -14,6 +14,7 @@ int main() {
     bool found = false;
 
     while (start <= end) {
+        
 
         int mid = start + (end - start) / 2;
 
